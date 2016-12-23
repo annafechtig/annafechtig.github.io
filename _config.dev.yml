@@ -1,0 +1,5 @@
+environment: development
+
+# Sass settings
+sass:
+  style: :expanded

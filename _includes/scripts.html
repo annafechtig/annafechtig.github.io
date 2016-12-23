@@ -1,0 +1,28 @@
+<!-- Main JavaScript file -->
+{% capture main_js %}
+  {% if site.environment != "development" %}
+    /assets/js/bundle.min.js
+  {% else %}
+    /assets/js/bundle.js
+  {% endif %}
+{% endcapture %}
+<script src="{{ main_js | strip | prepend: site.baseurl }}"></script>
+
+<!-- Google Analytics -->
+{% if site.environment != "development" %}
+  <script>
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', '{{ site.google_analytics.site_id }}']);
+    _gaq.push(['_addDevId', '{{ site.google_analytics.analycator_app_id }}']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script');
+      ga.type = 'text/javascript';
+      ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+{% endif %}
