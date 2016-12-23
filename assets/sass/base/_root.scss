@@ -1,0 +1,13 @@
+@import 'variables/colors';
+@import 'variables/typography';
+
+html {
+  box-sizing: border-box;
+}
+
+// @TODO SET BODY DEFAULT COLOR
+body {
+  font: 16px / 1.5 $sans-serif-font-stack;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}

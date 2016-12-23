@@ -1,5 +1,32 @@
+title: Anna Fechtig
+description: Anna Fechtig
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://anna-fechtig.com" # the base hostname & protocol for your site
+
 gems:
-  - jekyll-redirect-from
-exclude:
-  - Gemfile
-  - Gemfile.lock
+  - jekyll-sitemap
+
+collections:
+  projects:
+    output: true
+    permalink: /project/:path/
+
+defaults:
+  - scope:
+      path: ""
+      type: projects
+    values:
+      layout: project
+
+environment: production
+
+# Google Analytics settings
+# @TODO SET GOOGLE ANALYTICS IDS
+google_analytics:
+  site_id:
+  analycator_app_id:
+
+# Sass settings
+sass:
+  sass_dir: assets/sass
+  style: :compressed
