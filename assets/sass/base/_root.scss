@@ -5,8 +5,9 @@ html {
   box-sizing: border-box;
 }
 
-// @TODO SET BODY DEFAULT COLOR
 body {
+  background-color: $white;
+  color: $black;
   font: 16px / 1.5 $sans-serif-font-stack;
   scroll-behavior: smooth;
   overflow-x: hidden;
