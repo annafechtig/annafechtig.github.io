@@ -1,0 +1,7 @@
+{% assign icon = include.icon %}
+
+{% if icon %}
+  <svg class="icon" role="img" viewBox="0 0 32 32">
+    <use xlink:href="#icon-{{ icon }}"></use>
+  </svg>
+{% endif %}
