@@ -1,0 +1,25 @@
+@import 'abstracts/variables/animations';
+
+/**
+ * 1. Remove all default list styles.
+ */
+.social {
+  display: inline-block; /* 1 */
+  margin: 0; /* 1 */
+  padding: 0; /* 1 */
+  list-style: none; /* 1 */
+}
+
+/**
+ * 1. Fixes the icon being smaller than the clickable list item.
+ */
+.social__item {
+  display: inherit;
+  line-height: 1; /* 1 */
+  opacity: $menu-links-default-opacity;
+  transition: opacity $menu-links-transition-timing;
+}
+
+.social__item:hover {
+  opacity: 1;
+}

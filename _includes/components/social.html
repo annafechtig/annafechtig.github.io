@@ -1,0 +1,17 @@
+{% assign networks = site.social_networks %}
+
+<ul class="social">
+  {% for network in networks %}
+    <li class="social__item">
+      <a href="{{ network.link }}"
+        target="_blank"
+        rel="noopener noreferrer"
+        title="Check out my {{ network.name }}"
+      >
+        {% include components/icon.html
+          icon = network.icon
+        %}
+      </a>
+    </li>
+  {% endfor %}
+</ul>

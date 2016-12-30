@@ -3,6 +3,10 @@
   max-width: 200px;
   margin: 0 auto;
   color: $black;
+
+  @include media('>=small') {
+    margin: 0;
+  }
 }
 
 /**

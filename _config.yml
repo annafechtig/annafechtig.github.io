@@ -18,6 +18,14 @@ defaults:
     values:
       layout: project
 
+social_networks:
+  - name: Instagram
+    link: https://www.instagram.com/annalovesdonuts
+    icon: instagram
+  - name: Vimeo
+    link: https://vimeo.com/user21665398
+    icon: vimeo
+
 environment: production
 
 # Google Analytics settings
