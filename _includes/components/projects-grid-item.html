@@ -1,0 +1,10 @@
+{% assign project = include.project %}
+
+<a href="{{ project.url }}" title="Link to {{ project.title}} project detail">
+  <article class="projects-grid-item">
+    <img
+      class="img-responsive"
+      src="assets/images/projects-thumbnails/{{ project.thumbnail_url }}"
+    >
+  </article>
+</a>
