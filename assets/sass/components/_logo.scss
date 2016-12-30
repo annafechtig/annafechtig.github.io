@@ -1,0 +1,21 @@
+.logo {
+  display: block;
+  max-width: 200px;
+  margin: 0 auto;
+  color: $black;
+
+  @include media('>=small') {
+    margin: 0;
+  }
+}
+
+/**
+ * 1. Enforce a specific height as certain browsers render a very tall header.
+ * 2. Prevent the SVG from being huge on Safari.
+ */
+.logo svg {
+  max-height: 45px; /* 1 */
+  max-width: 100%; /* 2 */
+  vertical-align: middle;
+  fill: currentcolor;
+}

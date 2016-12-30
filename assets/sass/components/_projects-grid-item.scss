@@ -1,12 +1,12 @@
 @import 'abstracts/mixins/absolute-center';
 @import 'abstracts/variables/colors';
-$opacity-transition-timing: 500ms;
 
 .projects-grid-item {
   position: relative;
-  margin: 0 15px 60px;
+  padding: 0 15px;
 }
 
+/* col-xs-12 col-sm-offset-0 col-sm-6 col-md-4 */
 .projects-grid-item__link:hover,
 .projects-grid-item__link:focus {
   .projects-grid-item__image {
@@ -20,7 +20,7 @@ $opacity-transition-timing: 500ms;
 
 .projects-grid-item__image,
 .projects-grid-item__content {
-  transition: opacity $opacity-transition-timing;
+  transition: opacity $projects-opacity-transition-timing;
 }
 
 .projects-grid-item__content {
@@ -35,7 +35,7 @@ $opacity-transition-timing: 500ms;
   font-size: 1.250em;
   font-weight: lighter;
   color: $blue;
-  text-transform: lowercase; // Required as Orator Std is a uppercase font
+  text-transform: lowercase; // Required as Orator Std is an uppercase font
 }
 
 .projects-grid-item__separator {

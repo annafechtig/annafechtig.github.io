@@ -1,0 +1,16 @@
+@import 'abstracts/variables/animations';
+
+/**
+ * 1. Remove all default button styles.
+ */
+.about-button {
+  background-color: transparent; /* 1 */
+  border: none; /* 1 */
+  box-shadow: none; /* 1 */
+  opacity: $menu-links-default-opacity;
+  transition: opacity $menu-links-transition-timing;
+}
+
+.about-button:hover {
+  opacity: 1;
+}

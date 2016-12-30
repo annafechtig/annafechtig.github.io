@@ -1,5 +1,6 @@
 @import 'abstracts/variables/colors';
 @import 'abstracts/variables/typography';
+@import 'vendors/include-media';
 
 html {
   box-sizing: border-box;
@@ -16,7 +17,7 @@ html {
 }
 
 body {
-  background-color: $white;
+  background-color: $beige;
   color: $black;
   font: 100% / 1.5 $sans-serif-font-stack;
   scroll-behavior: smooth;
@@ -35,4 +36,46 @@ hr {
   border: none;
   height: 3px;
   background-color: $salmon;
+}
+
+/**
+ * Bootstrap overrides & customization
+ * 1. Remove the bottom margin of the items of the last row of the grid,
+ *    taking into account the cases when the grid is not fully filled. The
+ *    `projects-count` variable is automatically imported from Jekyll in
+ *    `main.scss`.
+ */
+.row .col {
+  margin-bottom: 60px;
+
+  /* 1 */
+  @include media('<=small') {
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  @function get-last-row-items-count($columns-count) {
+    $last-row-items-count: $projects-count % $columns-count;
+
+    @if ($last-row-items-count == 0) {
+      $last-row-items-count: $columns-count;
+    }
+
+    @return $last-row-items-count;
+  }
+
+  /* 1 */
+  @include media('>=small', '<=medium') {
+    &:nth-last-child(-n + #{ get-last-row-items-count(2) }) {
+      margin-bottom: 0;
+    }
+  }
+
+  /* 1 */
+  @include media('>=medium') {
+    &:nth-last-child(-n + #{ get-last-row-items-count(3) }) {
+      margin-bottom: 0;
+    }
+  }
 }

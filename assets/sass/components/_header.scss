@@ -1,0 +1,23 @@
+.header {
+  background-color: $white;
+  min-height: 60px;
+  margin-bottom: 2.5em;
+  padding: 0.5em 0;
+}
+
+.header__container {
+  padding: 0 80px;
+
+  @include media('>=small') {
+    display: flex;
+    align-items: baseline;
+  }
+}
+
+.header__links {
+  text-align: center;
+
+  @include media('>=small') {
+    text-align: right;
+  }
+}
