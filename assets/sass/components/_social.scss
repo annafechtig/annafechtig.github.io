@@ -17,9 +17,10 @@
   display: inherit;
   line-height: 1; /* 1 */
   opacity: $menu-links-default-opacity;
-  transition: opacity $menu-links-transition-timing;
+  transition: all $menu-links-transition-timing;
 }
 
 .social__item:hover {
   opacity: 1;
+  transform: rotate(15deg);
 }
