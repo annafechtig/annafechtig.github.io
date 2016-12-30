@@ -1,5 +1,7 @@
 ---
 ---
+$projects-count: {{ site.projects.size }};
+
 @charset 'utf-8';
 
 @import 'vendors/normalize';
@@ -8,11 +10,13 @@
 @import 'base/animations';
 @import 'base/root';
 
+@import 'components/about-button';
 @import 'components/header';
 @import 'components/icon';
 @import 'components/logo';
 @import 'components/projects-grid';
 @import 'components/projects-grid-item';
+@import 'components/social';
 
 @import 'pages/home';
 @import 'pages/project';
