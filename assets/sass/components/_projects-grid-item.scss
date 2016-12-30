@@ -4,9 +4,10 @@ $opacity-transition-timing: 500ms;
 
 .projects-grid-item {
   position: relative;
-  margin: 0 15px 60px;
+  padding: 0 15px;
 }
 
+/* col-xs-12 col-sm-offset-0 col-sm-6 col-md-4 */
 .projects-grid-item__link:hover,
 .projects-grid-item__link:focus {
   .projects-grid-item__image {

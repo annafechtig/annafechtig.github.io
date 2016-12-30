@@ -1,5 +1,6 @@
 @import 'abstracts/variables/colors';
 @import 'abstracts/variables/typography';
+@import 'vendors/include-media';
 
 html {
   box-sizing: border-box;
@@ -16,7 +17,7 @@ html {
 }
 
 body {
-  background-color: $white;
+  background-color: $beige;
   color: $black;
   font: 100% / 1.5 $sans-serif-font-stack;
   scroll-behavior: smooth;
@@ -35,4 +36,27 @@ hr {
   border: none;
   height: 3px;
   background-color: $salmon;
+}
+
+/**
+ * Bootstrap overrides & customization
+ */
+.row .col {
+  margin-bottom: 60px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @include media('>small') {
+    &:nth-last-child(2) {
+      margin-bottom: 0;
+    }
+  }
+
+  @include media('>large') {
+    &:nth-last-child(3) {
+      margin-bottom: 0;
+    }
+  }
 }
