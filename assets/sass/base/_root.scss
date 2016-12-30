@@ -1,14 +1,38 @@
-@import 'variables/colors';
-@import 'variables/typography';
+@import 'abstracts/variables/colors';
+@import 'abstracts/variables/typography';
 
 html {
   box-sizing: border-box;
 }
 
+/**
+ * Make all elements from the DOM inherit from the parent box-sizing
+ * Since `*` has a specificity of 0, it does not override the `html` value
+ * making all elements inheriting from the root box-sizing value
+ * See: https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+ */
+*, ::before, ::after {
+  box-sizing: inherit;
+}
+
 body {
   background-color: $white;
   color: $black;
-  font: 16px / 1.5 $sans-serif-font-stack;
+  font: 100% / 1.5 $sans-serif-font-stack;
   scroll-behavior: smooth;
   overflow-x: hidden;
+}
+
+a {
+  color: $black;
+}
+
+h1 {
+  line-height: 1;
+}
+
+hr {
+  border: none;
+  height: 3px;
+  background-color: $salmon;
 }

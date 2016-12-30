@@ -5,12 +5,8 @@ title: Home
 description: Anna Fechtig - Home page
 ---
 
-<h1>Home page</h1>
+{% assign projects = site.projects | default: [] %}
 
-<ul>
-  {% for project in site.projects %}
-    <li>
-      <a href="{{ project.url }}">{{ project.title }}</a>
-    </li>
-  {% endfor %}
-</ul>
+{% include components/projects-grid.html
+  projects = projects
+%}

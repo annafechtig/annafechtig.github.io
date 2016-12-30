@@ -1,0 +1,49 @@
+@import 'abstracts/mixins/absolute-center';
+@import 'abstracts/variables/colors';
+$opacity-transition-timing: 500ms;
+
+.projects-grid-item {
+  position: relative;
+  margin: 0 15px 60px;
+}
+
+.projects-grid-item__link:hover,
+.projects-grid-item__link:focus {
+  .projects-grid-item__image {
+    opacity: 0;
+  }
+
+  .projects-grid-item__content {
+    opacity: 1;
+  }
+}
+
+.projects-grid-item__image,
+.projects-grid-item__content {
+  transition: opacity $opacity-transition-timing;
+}
+
+.projects-grid-item__content {
+  @include absolute-center();
+  opacity: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.projects-grid-item__title {
+  margin-bottom: 0;
+  font-size: 1.250em;
+  font-weight: lighter;
+  color: $blue;
+  text-transform: lowercase; // Required as Orator Std is a uppercase font
+}
+
+.projects-grid-item__separator {
+  width: 40px;
+  margin: 0.4em auto;
+}
+
+.projects-grid-item__type {
+  font-family: $serif-font-stack;
+  color: $grey;
+}

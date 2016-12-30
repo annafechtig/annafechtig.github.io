@@ -1,0 +1,11 @@
+{% assign projects = include.projects | sort: "order" %}
+
+<div class="row">
+  {% for project in projects %}
+    <div class="col-xs-12 col-sm-offset-0 col-sm-6 col-md-4">
+      {% include components/projects-grid-item.html
+        project = project
+      %}
+    </div>
+  {% endfor %}
+</div>
