@@ -2,7 +2,7 @@
 @import 'abstracts/variables/colors';
 @import 'abstracts/variables/typography';
 
-.impressum-link {
+.imprint-link {
   position: absolute;
   left: 0;
   right: 0;
@@ -15,6 +15,6 @@
   transition: opacity $menu-links-transition-timing;
 }
 
-.impressum-link:hover {
+.imprint-link:hover {
   opacity: 1;
 }
