@@ -9,7 +9,7 @@ gems:
 collections:
   projects:
     output: true
-    permalink: /project/:path/
+    permalink: /:path/
 
 defaults:
   - scope:
