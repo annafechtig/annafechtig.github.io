@@ -1,6 +1,7 @@
 {% assign title = page.title | default: site.title | escape %}
 {% assign description = page.description | default: site.description | strip_html | strip_newlines | truncate: 160 %}
 {% assign url = page.url | replace: "index.html", "" | prepend: site.baseurl | prepend: site.url %}
+{% assign no_index = page.no_index %}
 
 <head>
   <meta charset="UTF-8">
@@ -10,6 +11,7 @@
   <title>{{ title }} | Anna Fechtig</title>
   <meta name="description" content="{{ description }}">
   <link rel="canonical" href="{{ url }}">
+  {% if no_index %} <meta name="robots" content="noindex"> {% endif %}
 
   <!-- Stylesheets -->
   <link rel="stylesheet" href="{{ "/assets/css/main.css" | prepend: site.baseurl }}">

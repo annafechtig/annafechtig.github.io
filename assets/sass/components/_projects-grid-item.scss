@@ -32,7 +32,7 @@
 
 .projects-grid-item__title {
   margin-bottom: 0;
-  font-size: 1.250em;
+  font-size: $medium-font-size;
   font-weight: lighter;
   color: $blue;
   text-transform: lowercase; // Required as Orator Std is an uppercase font
