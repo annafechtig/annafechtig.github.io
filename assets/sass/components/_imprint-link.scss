@@ -12,9 +12,10 @@
   font-size: $small-font-size;
   color: $grey;
   opacity: 0.4;
-  transition: opacity $menu-links-transition-timing;
+  transition: opacity $menu-links-transition-duration;
 }
 
-.imprint-link:hover {
+.imprint-link:hover,
+.imprint-link:focus {
   opacity: 1;
 }

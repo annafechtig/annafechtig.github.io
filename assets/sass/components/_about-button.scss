@@ -8,9 +8,10 @@
   border: none; /* 1 */
   box-shadow: none; /* 1 */
   opacity: $menu-links-default-opacity;
-  transition: opacity $menu-links-transition-timing;
+  transition: opacity $menu-links-transition-duration;
 }
 
-.about-button:hover {
+.about-button:hover,
+.about-button:focus {
   opacity: 1;
 }

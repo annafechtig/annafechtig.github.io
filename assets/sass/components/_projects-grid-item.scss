@@ -20,7 +20,7 @@
 
 .projects-grid-item__image,
 .projects-grid-item__content {
-  transition: opacity $projects-opacity-transition-timing;
+  transition: opacity $projects-opacity-transition-duration;
 }
 
 .projects-grid-item__content {
