@@ -16,12 +16,21 @@ html {
   box-sizing: inherit;
 }
 
+/*
+ * 1. Default size and positioning for impressum link.
+ */
 body {
+  position: relative; /* 1 */
+  min-height: 100vh; /* 1 */
   background-color: $beige;
   color: $black;
   font: #{$root-font-size} / 1.5 $sans-serif-font-stack;
   scroll-behavior: smooth;
   overflow-x: hidden;
+}
+
+.main {
+  padding-bottom: 2em;
 }
 
 a {
