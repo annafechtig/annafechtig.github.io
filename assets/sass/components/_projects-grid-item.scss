@@ -1,12 +1,20 @@
-@import 'abstracts/mixins/absolute-center';
 @import 'abstracts/variables/colors';
 
 .projects-grid-item {
-  position: relative;
   padding: 0 15px;
 }
 
-/* col-xs-12 col-sm-offset-0 col-sm-6 col-md-4 */
+/**
+ * 1. Using flex to center both horizontally and vertically the content instead
+ *    of using the absolute-center mixin as it causes weird flickering when it
+ *    is faded in.
+ */
+.projects-grid-item__link {
+  display: flex; /* 1 */
+  align-items: center; /* 1 */
+  justify-content: center; /* 1 */
+}
+
 .projects-grid-item__link:hover,
 .projects-grid-item__link:focus {
   .projects-grid-item__image {
@@ -24,18 +32,21 @@
 }
 
 .projects-grid-item__content {
-  @include absolute-center();
+  position: absolute;
   opacity: 0;
   width: 100%;
   text-align: center;
 }
 
+/*
+ * 1. Required as Orator Std is an uppercase font
+ */
 .projects-grid-item__title {
   margin-bottom: 0;
   font-size: $medium-font-size;
   font-weight: lighter;
   color: $blue;
-  text-transform: lowercase; // Required as Orator Std is an uppercase font
+  text-transform: lowercase; /* 1 */
 }
 
 .projects-grid-item__separator {
