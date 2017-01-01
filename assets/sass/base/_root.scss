@@ -58,8 +58,7 @@ hr {
 .row .col {
   margin-bottom: 60px;
 
-  /* 1 */
-  @include media('<=small') {
+  @include media('<=small') { /* 1 */
     &:last-child {
       margin-bottom: 0;
     }
@@ -75,15 +74,13 @@ hr {
     @return $last-row-items-count;
   }
 
-  /* 1 */
-  @include media('>=small', '<=medium') {
+  @include media('>=small', '<=medium') { /* 1 */
     &:nth-last-child(-n + #{get-last-row-items-count(2)}) {
       margin-bottom: 0;
     }
   }
 
-  /* 1 */
-  @include media('>=medium') {
+  @include media('>=medium') { /* 1 */
     &:nth-last-child(-n + #{get-last-row-items-count(3)}) {
       margin-bottom: 0;
     }

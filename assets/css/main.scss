@@ -18,6 +18,3 @@ $projects-count: {{ site.projects.size }};
 @import 'components/projects-grid';
 @import 'components/projects-grid-item';
 @import 'components/social';
-
-@import 'pages/home';
-@import 'pages/project';

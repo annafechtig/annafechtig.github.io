@@ -1,3 +1,5 @@
+environment: production
+
 title: Anna Fechtig
 description: Anna Fechtig
 baseurl: "" # the subpath of your site, e.g. /blog
@@ -18,6 +20,7 @@ defaults:
     values:
       layout: project
 
+# Accounts settings
 social_networks:
   - name: Instagram
     link: https://www.instagram.com/annalovesdonuts
@@ -26,9 +29,6 @@ social_networks:
     link: https://vimeo.com/user21665398
     icon: vimeo
 
-environment: production
-
-# Google Analytics settings
 # @TODO SET GOOGLE ANALYTICS IDS
 google_analytics:
   site_id:
