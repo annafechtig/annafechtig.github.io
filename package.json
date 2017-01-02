@@ -3,17 +3,14 @@
     "start": "jekyll serve --config _config.yml,_config.dev.yml",
     "postinstall": "npm run build",
     "icons": "spritesh --input assets/images/icons --output _includes/sprite.svg --viewbox '0 0 32 32' --prefix icon-",
-    "build": "npm run js && npm run css",
     "prejs": "cat assets/js/src/* > assets/js/bundle.js",
     "js": "cat assets/js/bundle.js | uglifyjs > assets/js/bundle.min.js",
-    "css": "postcss --use autoprefixer --replace _site/assets/css/*.css"
-  },
-  "dependencies": {
-    "autoprefixer": "^6.3.7",
-    "postcss-cli": "^2.5.2"
+    "uncss": "node ./scripts/uncss"
   },
   "devDependencies": {
+    "glob": "^7.1.1",
     "spritesh": "^1.2.0",
-    "uglify-js": "^2.6.2"
+    "uglify-js": "^2.6.2",
+    "uncss": "^0.14.1"
   }
 }

@@ -5,7 +5,7 @@ $projects-count: {{ site.projects.size }};
 @charset 'utf-8';
 
 @import 'vendors/normalize';
-@import 'vendors/bootstrap';
+@import 'vendors/bootstrap.un';
 
 @import 'base/animations';
 @import 'base/root';
