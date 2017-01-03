@@ -1,0 +1,5 @@
+{% assign about_text = site.about_text | markdownify | replace: "<p>", "" | replace: "</p>", "" %}
+
+<div class="about" aria-expanded="false">
+  <p class="about__text">{{ about_text }}</p>
+</div>

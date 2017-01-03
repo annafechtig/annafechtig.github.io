@@ -1,8 +1,26 @@
+@import 'abstracts/variables/animations';
+@import 'abstracts/variables/layout';
+
 .header {
-  background-color: $white;
-  min-height: 60px;
-  margin-bottom: 2.5em;
+  position: absolute;
+  width: 100%;
+  height: $mobile-header-height;
   padding: 0.5em 0;
+  background-color: $white;
+  z-index: 99;
+  transition: transform $about-opening-transition-duration;
+
+  @include media('>=small') {
+    height: $header-height;
+  }
+}
+
+.header--pushed {
+  transform: translateY(calc(100vh - #{$mobile-header-height}));
+
+  @include media('>=small') {
+    transform: translateY(calc(100vh - #{$header-height}));
+  }
 }
 
 .header__container {
