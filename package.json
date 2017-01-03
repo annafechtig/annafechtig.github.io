@@ -3,13 +3,20 @@
     "start": "jekyll serve --config _config.yml,_config.dev.yml",
     "postinstall": "npm run build",
     "icons": "spritesh --input assets/images/icons --output _includes/sprite.svg --viewbox '0 0 32 32' --prefix icon-",
-    "prejs": "cat assets/js/src/* > assets/js/bundle.js",
+    "prejs": "cat assets/js/src/vendors/*.js assets/js/src/*.js > assets/js/bundle.js",
     "js": "cat assets/js/bundle.js | uglifyjs > assets/js/bundle.min.js",
-    "uncss": "node ./scripts/uncss"
+    "uncss": "node ./scripts/uncss",
+    "lint": "standard"
+  },
+  "standard": {
+    "ignore": [
+      "assets/js/src/vendors/*.js"
+    ]
   },
   "devDependencies": {
     "glob": "^7.1.1",
     "spritesh": "^1.2.0",
+    "standard": "^8.6.0",
     "uglify-js": "^2.6.2",
     "uncss": "^0.14.1"
   }
