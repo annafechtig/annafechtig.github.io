@@ -25,7 +25,7 @@
  * Limitations: Doesn't support Shadow DOM v0
  */
 
- (function () {
+;(function () {
   function Detabinator (element) {
     if (!element) {
       console.warn(
@@ -40,8 +40,6 @@
     this._focusableElements = Array.prototype.slice.call(
       element.querySelectorAll(this._focusableElementsString)
     )
-
-    return this
   }
 
   Detabinator.prototype.inert = function (isInert) {
@@ -74,7 +72,7 @@
 
   window.Detabinator = Detabinator
 }())
-(function () {
+;(function () {
   document.addEventListener('DOMContentLoaded', initAbout)
 
   var about = document.querySelector('.about')
@@ -85,7 +83,6 @@
   var aboutDetabinator = new window.Detabinator(about)
   var mainDetabinator = new window.Detabinator(main)
 
-  var aboutModifierClass = 'about--opened'
   var headerModifierClass = 'header--pushed'
 
   function initAbout () {
@@ -109,7 +106,6 @@
   }
 
   function toggleClasses () {
-    about.classList.toggle(aboutModifierClass)
     header.classList.toggle(headerModifierClass)
   }
 

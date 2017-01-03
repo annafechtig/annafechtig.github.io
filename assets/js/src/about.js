@@ -1,4 +1,4 @@
-(function () {
+;(function () {
   document.addEventListener('DOMContentLoaded', initAbout)
 
   var about = document.querySelector('.about')
@@ -9,7 +9,6 @@
   var aboutDetabinator = new window.Detabinator(about)
   var mainDetabinator = new window.Detabinator(main)
 
-  var aboutModifierClass = 'about--opened'
   var headerModifierClass = 'header--pushed'
 
   function initAbout () {
@@ -33,7 +32,6 @@
   }
 
   function toggleClasses () {
-    about.classList.toggle(aboutModifierClass)
     header.classList.toggle(headerModifierClass)
   }
 

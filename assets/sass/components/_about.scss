@@ -12,7 +12,7 @@
   transition: transform $about-opening-transition-duration;
 }
 
-.about--opened {
+.about[aria-expanded="true"] {
   transform: translateY(0);
 }
 

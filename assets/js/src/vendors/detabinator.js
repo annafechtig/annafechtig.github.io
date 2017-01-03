@@ -25,7 +25,7 @@
  * Limitations: Doesn't support Shadow DOM v0
  */
 
- (function () {
+;(function () {
   function Detabinator (element) {
     if (!element) {
       console.warn(
@@ -40,8 +40,6 @@
     this._focusableElements = Array.prototype.slice.call(
       element.querySelectorAll(this._focusableElementsString)
     )
-
-    return this
   }
 
   Detabinator.prototype.inert = function (isInert) {
