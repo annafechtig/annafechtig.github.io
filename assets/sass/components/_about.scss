@@ -47,3 +47,21 @@
   margin: 0;
   text-transform: lowercase; /* 1 */
 }
+
+/*
+ * 1. Reset default list & list elements styles.
+ */
+.about__links {
+  margin: 0; /* 1 */
+  padding: 0; /* 1 */
+  list-style: none; /* 1 */
+  margin-top: 1em;
+  font-family: $serif-font-stack;
+  font-size: $small-font-size;
+  font-style: italic;
+}
+
+.about__link {
+  display: inline-block;
+  margin-right: 1em;
+}
