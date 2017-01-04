@@ -1,3 +1,5 @@
+@import 'vendors/include-media';
+@import 'abstracts/mixins/absolute-vertical-center';
 @import 'abstracts/variables/animations';
 @import 'abstracts/variables/colors';
 @import 'abstracts/variables/layout';
@@ -16,6 +18,26 @@
   transform: translateY(0);
 }
 
+.about__container {
+  height: 100%;
+}
+
+.about__content {
+  @include absolute-vertical-center();
+}
+
+.about__background {
+  @include media('>=small') {
+    height: 90%;
+    background-color: $salmon;
+    opacity: 0.1;
+  }
+}
+
+/*
+ * 1. Required as Orator Std is an uppercase font
+ */
 .about__text {
   margin: 0;
+  text-transform: lowercase; /* 1 */
 }
