@@ -17,6 +17,10 @@ html {
   box-sizing: inherit;
 }
 
+[aria-hidden="true"] {
+  visibility: hidden;
+}
+
 /*
  * 1. Default size and positioning for the imprint link.
  */

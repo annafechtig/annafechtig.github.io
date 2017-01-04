@@ -2,7 +2,7 @@
   "scripts": {
     "start": "jekyll serve --config _config.yml,_config.dev.yml",
     "icons": "spritesh --input assets/images/icons --output _includes/sprite.svg --viewbox '0 0 32 32' --prefix icon-",
-    "prejs": "cat assets/js/src/vendors/*.js assets/js/src/*.js > assets/js/bundle.js",
+    "prejs": "cat assets/js/src/*.js > assets/js/bundle.js",
     "js": "cat assets/js/bundle.js | uglifyjs > assets/js/bundle.min.js",
     "uncss": "node ./scripts/uncss",
     "lint": "standard"

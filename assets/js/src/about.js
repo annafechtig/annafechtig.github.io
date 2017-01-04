@@ -6,17 +6,14 @@
   var header = document.querySelector('.header')
   var main = document.querySelector('.main')
 
-  var aboutDetabinator = new window.Detabinator(about)
-  var mainDetabinator = new window.Detabinator(main)
-
   var bodyModifierClass = 'body--unscrollable'
   var headerModifierClass = 'header--pushed'
+  var aboutTransitionDuration = about && (parseFloat(
+    window.getComputedStyle(about)['transitionDuration']
+  ) * 1000)
 
   function initAbout () {
-    aboutButton.addEventListener('click', toggleAbout)
-    // By default, about is closed and the user shouldn’t be able to tab through
-    // its elements.
-    aboutDetabinator.inert(true)
+    aboutButton && aboutButton.addEventListener('click', toggleAbout)
   }
 
   function isAboutExpanded () {
@@ -24,12 +21,19 @@
   }
 
   function changeAriaStates (state) {
-    about.setAttribute('aria-expanded', state)
     aboutButton.setAttribute('aria-pressed', state)
+    about.setAttribute('aria-expanded', state)
 
-    // Allows/Disallows tabbing through all children of main & about.
-    mainDetabinator.inert(state)
-    aboutDetabinator.inert(!state)
+    // Allows/Disallows tabbing through all children of about & main.
+    main.setAttribute('aria-hidden', state)
+
+    // Delays the `aria-hidden` switch when closing the about section, so that
+    // it doesn’t break the animation.
+    var timeout = (state ? 0 : aboutTransitionDuration)
+
+    setTimeout(function () {
+      about.setAttribute('aria-hidden', !state)
+    }, timeout)
   }
 
   function toggleClasses () {
