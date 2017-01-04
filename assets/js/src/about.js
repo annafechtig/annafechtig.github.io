@@ -9,6 +9,7 @@
   var aboutDetabinator = new window.Detabinator(about)
   var mainDetabinator = new window.Detabinator(main)
 
+  var bodyModifierClass = 'body--unscrollable'
   var headerModifierClass = 'header--pushed'
 
   function initAbout () {
@@ -33,6 +34,7 @@
 
   function toggleClasses () {
     header.classList.toggle(headerModifierClass)
+    document.body.classList.toggle(bodyModifierClass)
   }
 
   function toggleAbout () {

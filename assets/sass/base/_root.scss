@@ -30,6 +30,10 @@ body {
   overflow-x: hidden;
 }
 
+.body--unscrollable {
+  overflow: hidden;
+}
+
 /*
  * 1. Main content is pushed down so it isn’t overlapped by the header.
  */
