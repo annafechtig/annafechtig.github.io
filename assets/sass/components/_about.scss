@@ -1,5 +1,4 @@
 @import 'vendors/include-media';
-@import 'abstracts/mixins/absolute-vertical-center';
 @import 'abstracts/variables/animations';
 @import 'abstracts/variables/colors';
 @import 'abstracts/variables/layout';
@@ -7,7 +6,7 @@
 .about {
   position: absolute;
   width: 100%;
-  height: calc(100vh - #{$header-height});
+  height: 100vh;
   transform: translateY(-100%);
   background-color: $white;
   z-index: 99;
@@ -23,12 +22,19 @@
 }
 
 .about__content {
-  @include absolute-vertical-center();
+  position: absolute;
+  top: calc(50% - #{$mobile-header-height / 2});
+  transform: translateY(-50%);
+
+  @include media('>=small') {
+    top: calc(50% - #{$header-height / 2});
+    transform: translateY(-50%);
+  }
 }
 
 .about__background {
   @include media('>=small') {
-    height: 90%;
+    height: 85%;
     background-color: $salmon;
     opacity: 0.1;
   }
