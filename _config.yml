@@ -21,6 +21,17 @@ defaults:
     values:
       layout: project
 
+# Markdown settings
+markdown: kramdown
+kramdown:
+  input: GFM
+
+# Use two backslashes and indent the text with two spaces to add a linebreak.
+about_text: >
+  Hello! \\
+    My name is Anna and I’m a 3rd year Media design student at
+    <a href="https://www.hdpk.de/de/startseite/" target="_blank" rel="noopener noreferrer">HDPK</a>.
+
 # Accounts settings
 social_networks:
   - name: Instagram
@@ -29,6 +40,8 @@ social_networks:
   - name: Vimeo
     link: https://vimeo.com/user21665398
     icon: vimeo
+
+email_address: anna.fechtig@t-online.de
 
 # @TODO SET GOOGLE ANALYTICS IDS
 google_analytics:

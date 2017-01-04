@@ -5,11 +5,16 @@ $projects-count: {{ site.projects.size }};
 @charset 'utf-8';
 
 @import 'vendors/normalize';
-@import 'vendors/bootstrap.un';
+{% if site.environment != "development" %}
+  @import 'vendors/bootstrap.un';
+{% else %}
+  @import 'vendors/bootstrap';
+{% endif %}
 
 @import 'base/animations';
 @import 'base/root';
 
+@import 'components/about';
 @import 'components/about-button';
 @import 'components/header';
 @import 'components/icon';

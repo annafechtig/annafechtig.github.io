@@ -1,6 +1,7 @@
+@import 'vendors/include-media';
 @import 'abstracts/variables/colors';
 @import 'abstracts/variables/typography';
-@import 'vendors/include-media';
+@import 'abstracts/variables/layout';
 
 html {
   box-sizing: border-box;
@@ -29,8 +30,16 @@ body {
   overflow-x: hidden;
 }
 
+/*
+ * 1. Main content is pushed down so it isn’t overlapped by the header.
+ */
 .main {
+  padding-top: calc(#{$mobile-header-height} + 2.5em); /* 1 */
   padding-bottom: 2em;
+
+  @include media('>=small') {
+    padding-top: calc(#{$header-height} + 2.5em); /* 1 */
+  }
 }
 
 a {
