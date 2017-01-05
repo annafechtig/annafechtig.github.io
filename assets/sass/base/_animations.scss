@@ -22,6 +22,20 @@
   }
 }
 
+@-webkit-keyframes project-item-reveal {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(40px);
+    transform: translateY(40px);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
 @keyframes project-item-reveal {
   from {
     opacity: 0;
