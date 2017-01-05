@@ -53,6 +53,11 @@
 .about__text {
   margin: 0;
   text-transform: lowercase; /* 1 */
+  color: $blue;
+}
+
+.about__text a {
+  color: inherit;
 }
 
 /**
@@ -68,7 +73,18 @@
   font-style: italic;
 }
 
-.about__link {
+.about__links-item {
   display: inline-block;
   margin-right: 1em;
+}
+
+.about__link {
+  opacity: $menu-links-default-opacity;
+  -webkit-transition: opacity $menu-links-transition-duration;
+  transition: opacity $menu-links-transition-duration;
+}
+
+.about__link:hover,
+.about__link:focus {
+  opacity: 1;
 }
