@@ -12,6 +12,7 @@
   font-size: $small-font-size;
   color: $grey;
   opacity: 0.4;
+  -webkit-transition: opacity $menu-links-transition-duration;
   transition: opacity $menu-links-transition-duration;
 }
 

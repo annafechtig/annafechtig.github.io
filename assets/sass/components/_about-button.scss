@@ -8,6 +8,7 @@
   border: none; /* 1 */
   box-shadow: none; /* 1 */
   opacity: $menu-links-default-opacity;
+  -webkit-transition: opacity $menu-links-transition-duration;
   transition: opacity $menu-links-transition-duration;
 }
 

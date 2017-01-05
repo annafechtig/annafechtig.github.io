@@ -10,8 +10,14 @@
  *    is faded in.
  */
 .projects-grid-item__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex; /* 1 */
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center; /* 1 */
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center; /* 1 */
 }
 
@@ -28,6 +34,7 @@
 
 .projects-grid-item__image,
 .projects-grid-item__content {
+  -webkit-transition: opacity $projects-opacity-transition-duration;
   transition: opacity $projects-opacity-transition-duration;
 }
 

@@ -8,7 +8,10 @@
   padding: 0.5em 0;
   background-color: $white;
   z-index: 99;
+  -webkit-transition: -webkit-transform $about-opening-transition-duration;
+  transition: -webkit-transform $about-opening-transition-duration;
   transition: transform $about-opening-transition-duration;
+  transition: transform $about-opening-transition-duration, -webkit-transform $about-opening-transition-duration;
 
   @include media('>=small') {
     min-height: $header-height;
@@ -16,9 +19,11 @@
 }
 
 .header--pushed {
+  -webkit-transform: translateY(calc(100vh - #{$mobile-header-height}));
   transform: translateY(calc(100vh - #{$mobile-header-height}));
 
   @include media('>=small') {
+    -webkit-transform: translateY(calc(100vh - #{$header-height}));
     transform: translateY(calc(100vh - #{$header-height}));
   }
 }
@@ -27,7 +32,11 @@
   padding: 0 80px;
 
   @include media('>=small') {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: baseline;
+    -ms-flex-align: baseline;
     align-items: baseline;
   }
 }
