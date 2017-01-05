@@ -1,0 +1,8 @@
+/**
+ * 1. Required for iOS devices.
+ */
+.unscrollable {
+  height: 100%; /* 1 */
+  width: 100%; /* 1 */
+  overflow: hidden;
+}

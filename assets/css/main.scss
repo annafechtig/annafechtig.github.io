@@ -13,6 +13,7 @@ $projects-count: {{ site.projects.size }};
 
 @import 'base/animations';
 @import 'base/root';
+@import 'base/utilities';
 
 @import 'components/about';
 @import 'components/about-button';

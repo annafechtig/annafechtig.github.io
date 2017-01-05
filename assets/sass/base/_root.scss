@@ -5,6 +5,7 @@
 
 html {
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 /**
@@ -21,8 +22,9 @@ html {
   visibility: hidden;
 }
 
-/*
+/**
  * 1. Default size and positioning for the imprint link.
+ * 2. Inheritance of HTML styles on body is required for iOS devices.
  */
 body {
   position: relative; /* 1 */
@@ -31,14 +33,10 @@ body {
   color: $black;
   font: #{$root-font-size} / 1.5 $sans-serif-font-stack;
   scroll-behavior: smooth;
-  overflow-x: hidden;
+  overflow-x: inherit; /* 2 */
 }
 
-.body--unscrollable {
-  overflow: hidden;
-}
-
-/*
+/**
  * 1. Main content is pushed down so it isn’t overlapped by the header.
  */
 .main {

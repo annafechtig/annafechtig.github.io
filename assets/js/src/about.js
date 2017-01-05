@@ -6,7 +6,7 @@
   var header = document.querySelector('.header')
   var main = document.querySelector('.main')
 
-  var bodyModifierClass = 'body--unscrollable'
+  var unscrollableModifierClass = 'unscrollable'
   var headerModifierClass = 'header--pushed'
 
   var aboutTransitionDuration = about && (parseFloat(
@@ -49,8 +49,10 @@
   }
 
   function toggleClasses () {
+    [document.documentElement, document.body].forEach(function (node) {
+      node.classList.toggle(unscrollableModifierClass)
+    })
     header.classList.toggle(headerModifierClass)
-    document.body.classList.toggle(bodyModifierClass)
   }
 
   function toggleAbout () {
