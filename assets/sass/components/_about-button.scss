@@ -10,6 +10,7 @@
   opacity: $menu-links-default-opacity;
   -webkit-transition: opacity $menu-links-transition-duration;
   transition: opacity $menu-links-transition-duration;
+  cursor: pointer;
 }
 
 .about-button:hover,
