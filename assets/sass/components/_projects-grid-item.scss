@@ -1,8 +1,12 @@
 @import 'abstracts/mixins/absolute-center';
+@import 'abstracts/variables/animations';
 @import 'abstracts/variables/colors';
 
 .projects-grid-item {
   padding: 0 15px;
+
+  -webkit-animation: project-item-reveal $projects-item-reveal-duration both;
+  animation: project-item-reveal $projects-item-reveal-duration both;
 }
 
 /**

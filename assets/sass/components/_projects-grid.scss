@@ -1,0 +1,18 @@
+@import 'abstracts/variables/animations';
+
+.projects-grid .col {
+  @for $i from 1 through $projects-count {
+    $delay: 0;
+
+    @if ($i == 1) {
+      $delay: $projects-item-reveal-delay;
+    } @else {
+      $delay: $projects-item-reveal-delay * $i;
+    }
+
+    &:nth-child(#{$i}) .projects-grid-item {
+      -webkit-animation-delay: ($header-slide-down-duration + $header-slide-down-delay) + $delay;
+      animation-delay: ($header-slide-down-duration + $header-slide-down-delay) + $delay;
+    }
+  }
+}

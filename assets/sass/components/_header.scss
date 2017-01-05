@@ -17,13 +17,27 @@
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center; /* 1 */
-  -webkit-transition: -webkit-transform $about-opening-transition-duration;
-  transition: -webkit-transform $about-opening-transition-duration;
-  transition: transform $about-opening-transition-duration;
-  transition: transform $about-opening-transition-duration, -webkit-transform $about-opening-transition-duration;
+
+  -webkit-transition: min-height $about-hint-transition-duration, -webkit-transform $about-opening-transition-duration;
+  transition: min-height $about-hint-transition-duration, -webkit-transform $about-opening-transition-duration;
+  transition: transform $about-opening-transition-duration, min-height $about-hint-transition-duration;
+  transition: transform $about-opening-transition-duration, min-height $about-hint-transition-duration, -webkit-transform $about-opening-transition-duration;
+
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+  -webkit-animation: header-slide-down $header-slide-down-duration $header-slide-down-delay backwards;
+  animation: header-slide-down $header-slide-down-duration $header-slide-down-delay backwards;
 
   @include media('>=small') {
     min-height: $header-height;
+  }
+}
+
+.header--push-hinted {
+  min-height: #{$mobile-header-height + 10};
+
+  @include media('>=small') {
+    min-height: #{$header-height + 10};
   }
 }
 
