@@ -1,4 +1,12 @@
-/* @TODO ADD CUSTOM TIMING FUNCTION TO ALL ANIMATIONS */
+/* @TODO ADD CUSTOM TIMING FUNCTION TO ALL ANIMATIONS AND TRANSITIONS */
+
+/* Animations */
+$header-slide-down-duration: 350ms;
+$header-slide-down-delay: 150ms;
+$projects-item-reveal-duration: 350ms;
+$projects-item-reveal-delay: 100ms;
+
+/* Transitions */
 $about-opening-transition-duration: 350ms;
 $menu-links-default-opacity: 0.6;
 $menu-links-transition-duration: 350ms;

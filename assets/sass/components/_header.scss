@@ -22,6 +22,11 @@
   transition: transform $about-opening-transition-duration;
   transition: transform $about-opening-transition-duration, -webkit-transform $about-opening-transition-duration;
 
+  -webkit-transform: translateY(-100%);
+  transform: translateY(-100%);
+  -webkit-animation: header-slide-down $header-slide-down-duration $header-slide-down-delay forwards;
+  animation: header-slide-down $header-slide-down-duration $header-slide-down-delay forwards;
+
   @include media('>=small') {
     min-height: $header-height;
   }
