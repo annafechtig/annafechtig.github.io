@@ -8,9 +8,12 @@
 
   var bodyModifierClass = 'body--unscrollable'
   var headerModifierClass = 'header--pushed'
+
   var aboutTransitionDuration = about && (parseFloat(
     window.getComputedStyle(about)['transitionDuration']
   ) * 1000)
+  var aboutTimeout
+  var mainTimeout
 
   function initAbout () {
     aboutButton && aboutButton.addEventListener('click', toggleAbout)
@@ -20,20 +23,29 @@
     return about.getAttribute('aria-expanded') === 'true'
   }
 
+  function clearTimeouts () {
+    [aboutTimeout, mainTimeout].forEach(function (timeout) {
+      clearTimeout(timeout)
+    })
+  }
+
   function changeAriaStates (state) {
+    // Always clear the timeouts to avoid bugs when quickly toggling the
+    // about section.
+    clearTimeouts()
+
     aboutButton.setAttribute('aria-pressed', state)
     about.setAttribute('aria-expanded', state)
 
-    // Allows/Disallows tabbing through all children of about & main.
-    main.setAttribute('aria-hidden', state)
+    // Allows/Disallows tabbing through all children of about & main. Delays the
+    // `aria-hidden` switch so that it doesn’t break the animation.
+    mainTimeout = setTimeout(function () {
+      main.setAttribute('aria-hidden', state)
+    }, (state ? aboutTransitionDuration : 0))
 
-    // Delays the `aria-hidden` switch when closing the about section, so that
-    // it doesn’t break the animation.
-    var timeout = (state ? 0 : aboutTransitionDuration)
-
-    setTimeout(function () {
+    aboutTimeout = setTimeout(function () {
       about.setAttribute('aria-hidden', !state)
-    }, timeout)
+    }, (state ? 0 : aboutTransitionDuration))
   }
 
   function toggleClasses () {
