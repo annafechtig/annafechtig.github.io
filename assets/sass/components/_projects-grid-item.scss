@@ -1,3 +1,4 @@
+@import 'abstracts/mixins/absolute-center';
 @import 'abstracts/variables/colors';
 
 .projects-grid-item {
@@ -5,9 +6,8 @@
 }
 
 /**
- * 1. Using flex to center both horizontally and vertically the content instead
- *    of using the absolute-center mixin as it causes weird flickering when it
- *    is faded in.
+ * 1. Using flexbox allows the grid’s content to always be centered vertically
+ *    and horizontally.
  */
 .projects-grid-item__link {
   display: -webkit-box;
@@ -39,9 +39,8 @@
 }
 
 .projects-grid-item__content {
-  position: absolute;
+  @include absolute-center();
   opacity: 0;
-  width: 100%;
   text-align: center;
 }
 
