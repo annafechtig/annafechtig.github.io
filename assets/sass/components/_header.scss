@@ -1,6 +1,9 @@
 @import 'abstracts/variables/animations';
 @import 'abstracts/variables/layout';
 
+/**
+ * 1. Centers header content vertically.
+ */
 .header {
   position: absolute;
   width: 100%;
@@ -8,6 +11,12 @@
   padding: 0.5em 0;
   background-color: $white;
   z-index: 99;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; /* 1 */
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; /* 1 */
   -webkit-transition: -webkit-transform $about-opening-transition-duration;
   transition: -webkit-transform $about-opening-transition-duration;
   transition: transform $about-opening-transition-duration;
