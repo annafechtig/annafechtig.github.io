@@ -34,10 +34,10 @@
 }
 
 .header--push-hinted {
-  min-height: #{$mobile-header-height + 15};
+  min-height: #{$mobile-header-height + 10};
 
   @include media('>=small') {
-    min-height: #{$header-height + 15};
+    min-height: #{$header-height + 10};
   }
 }
 
