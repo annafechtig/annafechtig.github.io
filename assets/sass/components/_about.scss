@@ -1,4 +1,5 @@
 @import 'vendors/include-media';
+@import 'abstracts/mixins/underline';
 @import 'abstracts/variables/animations';
 @import 'abstracts/variables/colors';
 @import 'abstracts/variables/layout';
@@ -66,14 +67,8 @@
 }
 
 .about__text a::after {
+  @include underline();
   opacity: 0;
-  content: '';
-  position: absolute;
-  top: 100%;
-  left: 0;
-  height: 2px;
-  width: 100%;
-  background-color: $salmon;
   -webkit-transform: translateX(-30%);
   transform: translateX(-30%);
   -webkit-transition: opacity $menu-links-transition-duration, -webkit-transform $menu-links-transition-duration;
@@ -112,11 +107,13 @@
 /**
  * 1. Extra 2% are needed to not hide the last character, caused by the serif
  *    font.
- * 2. Hides the `about__link` after elements.
+ * 2. Bump up the height so that the underline is not cut.
+ * 3. Hides the `about__link` after elements.
  */
 .about__links-item-wrapper {
   width: 102%; /* 1 */
-  overflow: hidden; /* 2 */
+  height: 1.5em; /* 2 */
+  overflow: hidden; /* 3 */
 }
 
 /**
@@ -130,13 +127,7 @@
 }
 
 .about__link::after {
-  content: '';
-  position: absolute;
-  top: 100%;
-  display: block;
-  height: 2px;
-  width: 100%;
-  background-color: $salmon;
+  @include underline();
   -webkit-transform: translateX(-102%) translateZ(0);
   transform: translateX(-102%) translateZ(0);
   -webkit-transition: -webkit-transform $menu-links-transition-duration;

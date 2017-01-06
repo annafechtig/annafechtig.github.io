@@ -1,0 +1,11 @@
+@import 'abstracts/variables/layout';
+
+@mixin underline {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 0;
+  height: $separators-height;
+  width: 100%;
+  background-color: $salmon;
+}
