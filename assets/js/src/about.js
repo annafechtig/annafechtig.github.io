@@ -17,21 +17,30 @@
   var mainTimeout
 
   function initAbout () {
-    aboutButton && aboutButton.addEventListener('click', toggleAbout)
-    aboutButton &&
+    if (aboutButton) {
       ['mouseover', 'focus', 'mouseout', 'blur'].forEach(function (event) {
         aboutButton.addEventListener(event, toggleAboutHinting)
       })
+      aboutButton.addEventListener('click', toggleAbout)
+    }
   }
 
-  function toggleAboutHinting () {
-    !header.classList.contains(headerModifierClass) &&
-      header.classList.toggle(aboutHintModifierClass)
+  function toggleAboutHinting (event) {
+    var headerClassList = header.classList
+
+    if (event.type === 'mouseout' || event.type === 'blur') {
+      headerClassList.remove(aboutHintModifierClass)
+    } else {
+      !headerClassList.contains(headerModifierClass) &&
+        headerClassList.add(aboutHintModifierClass)
+    }
   }
 
   function toggleAbout () {
-    toggleClasses()
-    changeAriaStates(!isAboutExpanded())
+    var state = !isAboutExpanded()
+
+    toggleClasses(state)
+    changeAriaStates(state)
   }
 
   function isAboutExpanded () {
@@ -67,10 +76,11 @@
     }, (state ? 0 : aboutTransitionDuration))
   }
 
-  function toggleClasses () {
+  function toggleClasses (state) {
     [document.documentElement, document.body].forEach(function (node) {
       node.classList.toggle(unscrollableModifierClass)
     })
     header.classList.toggle(headerModifierClass)
+    header.classList.remove(aboutHintModifierClass)
   }
 }())
