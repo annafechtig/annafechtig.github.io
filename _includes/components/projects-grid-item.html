@@ -6,16 +6,18 @@
     title="See {{ project.title}} project detail"
     class="projects-grid-item__link"
   >
-    <img
-      class="img-responsive projects-grid-item__image"
-      src="assets/images/projects-thumbnails/{{ project.thumbnail_url }}"
-      alt="Thumbnail image for {{ project.title }}"
-    >
+    <div class="projects-grid-item__wrapper">
+      <img
+        class="img-responsive projects-grid-item__image"
+        src="assets/images/projects-thumbnails/{{ project.thumbnail_url }}"
+        alt="Thumbnail image for {{ project.title }}"
+      >
 
-    <div class="projects-grid-item__content">
-      <h1 class="projects-grid-item__title">{{ project.title }}</h1>
-      <hr class="projects-grid-item__separator">
-      <span class="projects-grid-item__type">{{ project.type }}</span>
+      <div class="projects-grid-item__content">
+        <h1 class="projects-grid-item__title">{{ project.title }}</h1>
+        <hr class="projects-grid-item__separator">
+        <span class="projects-grid-item__type">{{ project.type }}</span>
+      </div>
     </div>
   </a>
 </article>
