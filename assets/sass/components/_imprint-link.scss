@@ -14,9 +14,9 @@
   opacity: 0.4;
   -webkit-transition: opacity $menu-links-transition-duration;
   transition: opacity $menu-links-transition-duration;
-}
 
-.imprint-link:hover,
-.imprint-link:focus {
-  opacity: 1;
+  &:hover,
+  &:focus {
+    opacity: 1;
+  }
 }

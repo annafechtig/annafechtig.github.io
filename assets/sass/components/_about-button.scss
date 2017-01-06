@@ -8,12 +8,12 @@
   border: none; /* 1 */
   box-shadow: none; /* 1 */
   opacity: $menu-links-default-opacity;
+  cursor: pointer;
   -webkit-transition: opacity $menu-links-transition-duration;
   transition: opacity $menu-links-transition-duration;
-  cursor: pointer;
-}
 
-.about-button:hover,
-.about-button:focus {
-  opacity: 1;
+  &:hover,
+  &:focus {
+    opacity: 1;
+  }
 }

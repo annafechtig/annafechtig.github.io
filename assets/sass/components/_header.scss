@@ -5,28 +5,28 @@
  * 1. Centers header content vertically.
  */
 .header {
-  position: absolute;
-  width: 100%;
-  min-height: $mobile-header-height;
-  padding: 0.5em 0;
-  background-color: $white;
-  z-index: 99;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; /* 1 */
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center; /* 1 */
-
-  -webkit-transition: min-height $about-hint-transition-duration, -webkit-transform $about-opening-transition-duration;
-  transition: min-height $about-hint-transition-duration, -webkit-transform $about-opening-transition-duration;
-  transition: transform $about-opening-transition-duration, min-height $about-hint-transition-duration;
-  transition: transform $about-opening-transition-duration, min-height $about-hint-transition-duration, -webkit-transform $about-opening-transition-duration;
+  position: absolute;
+  width: 100%;
+  min-height: $mobile-header-height;
+  padding: 0.5em 0;
+  background-color: $white;
+  z-index: 99;
 
   -webkit-transform: translateY(0);
   transform: translateY(0);
   -webkit-animation: header-slide-down $header-slide-down-duration $header-slide-down-delay backwards;
   animation: header-slide-down $header-slide-down-duration $header-slide-down-delay backwards;
+
+  -webkit-transition: min-height $about-hint-transition-duration, -webkit-transform $about-opening-transition-duration;
+  transition: min-height $about-hint-transition-duration, -webkit-transform $about-opening-transition-duration;
+  transition: transform $about-opening-transition-duration, min-height $about-hint-transition-duration;
+  transition: transform $about-opening-transition-duration, min-height $about-hint-transition-duration, -webkit-transform $about-opening-transition-duration;
 
   @include media('>=small') {
     min-height: $header-height;
