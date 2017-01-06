@@ -31,6 +31,7 @@
   top: calc(50% - #{$mobile-header-height / 2});
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
+  z-index: 99;
 
   @include media('>=small') {
     top: calc(50% - #{$header-height / 2});
@@ -56,8 +57,38 @@
   color: $blue;
 }
 
+/**
+ * 1. Positioning context for after element.
+ */
 .about__text a {
+  position: relative; /* 1 */
   color: inherit;
+}
+
+.about__text a::after {
+  opacity: 0;
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 0;
+  height: 1px;
+  width: 100%;
+  background-color: $salmon;
+  -webkit-transform: translateX(-30%);
+  transform: translateX(-30%);
+  -webkit-transition: opacity $menu-links-transition-duration, -webkit-transform $menu-links-transition-duration;
+  transition: opacity $menu-links-transition-duration, -webkit-transform $menu-links-transition-duration;
+  transition: transform $menu-links-transition-duration, opacity $menu-links-transition-duration;
+  transition: transform $menu-links-transition-duration, opacity $menu-links-transition-duration, -webkit-transform $menu-links-transition-duration;
+}
+
+.about__text a:hover,
+.about__text a:focus {
+  &::after {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
 }
 
 /**
@@ -78,13 +109,48 @@
   margin-right: 1em;
 }
 
+/**
+ * 1. Extra 1% is needed to not hide the last character, caused by the serif
+ *    font.
+ * 2. Hides the `about__link` after elements.
+ */
+.about__links-item-wrapper {
+  width: 101%; /* 1 */
+  overflow: hidden; /* 2 */
+}
+
+/**
+ * 1. Positioning context for after element.
+ */
 .about__link {
+  position: relative; /* 1 */
   opacity: $menu-links-default-opacity;
   -webkit-transition: opacity $menu-links-transition-duration;
   transition: opacity $menu-links-transition-duration;
 }
 
+.about__link::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  display: block;
+  height: 1px;
+  width: 100%;
+  background-color: $salmon;
+  -webkit-transform: translateX(-101%) translateZ(0);
+  transform: translateX(-101%) translateZ(0);
+  -webkit-transition: -webkit-transform $menu-links-transition-duration;
+  transition: -webkit-transform $menu-links-transition-duration;
+  transition: transform $menu-links-transition-duration;
+  transition: transform $menu-links-transition-duration, -webkit-transform $menu-links-transition-duration;
+}
+
 .about__link:hover,
 .about__link:focus {
   opacity: 1;
+
+  &::after {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
 }
