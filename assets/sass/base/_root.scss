@@ -25,6 +25,7 @@ html {
 /**
  * 1. Default size and positioning for the imprint link.
  * 2. Inheritance of HTML styles on body is required for iOS devices.
+ * 3. Fixes a lot of typography bugs.
  */
 body {
   position: relative; /* 1 */
@@ -34,6 +35,7 @@ body {
   font: #{$root-font-size} / 1.5 $sans-serif-font-stack;
   scroll-behavior: smooth;
   overflow-x: inherit; /* 2 */
+  -webkit-font-smoothing: antialiased; /* 3 */
 }
 
 /**
@@ -59,7 +61,7 @@ h1 {
 
 hr {
   border: none;
-  height: 3px;
+  height: 2px;
   background-color: $salmon;
 }
 
