@@ -25,23 +25,6 @@
   justify-content: center; /* 1 */
 }
 
-.projects-grid-item__link:hover,
-.projects-grid-item__link:focus {
-  .projects-grid-item__image {
-    opacity: 0;
-  }
-
-  .projects-grid-item__content {
-    opacity: 1;
-  }
-}
-
-.projects-grid-item__image,
-.projects-grid-item__content {
-  -webkit-transition: opacity $projects-opacity-transition-duration;
-  transition: opacity $projects-opacity-transition-duration;
-}
-
 .projects-grid-item__content {
   @include absolute-center();
   opacity: 0;
@@ -57,6 +40,8 @@
   font-weight: lighter;
   color: $blue;
   text-transform: lowercase; /* 1 */
+  -webkit-transform: translateY(-20px);
+  transform: translateY(-20px);
 }
 
 .projects-grid-item__separator {
@@ -64,7 +49,47 @@
   margin: 0.4em auto;
 }
 
+/**
+ * 1. The span needs to be of display block to be translated for the transition.
+ */
 .projects-grid-item__type {
+  display: block; /* 1 */
   font-family: $serif-font-stack;
   color: $grey;
+  -webkit-transform: translateY(20px);
+  transform: translateY(20px);
+}
+
+.projects-grid-item__title,
+.projects-grid-item__type {
+  -webkit-transition: -webkit-transform $projects-opacity-transition-duration;
+  transition: -webkit-transform $projects-opacity-transition-duration;
+  transition: transform $projects-opacity-transition-duration;
+  transition: transform $projects-opacity-transition-duration, -webkit-transform $projects-opacity-transition-duration;
+}
+
+.projects-grid-item__image,
+.projects-grid-item__content {
+  -webkit-transition: opacity $projects-opacity-transition-duration;
+  transition: opacity $projects-opacity-transition-duration;
+}
+
+.projects-grid-item__link:hover,
+.projects-grid-item__link:focus {
+  .projects-grid-item__image {
+    opacity: 0;
+  }
+
+  .projects-grid-item__content {
+    opacity: 1;
+
+    .projects-grid-item__title,
+    .projects-grid-item__type {
+      -webkit-transform: translateY(0);
+      transform: translateY(0);
+    }
+
+    .projects-grid-item__separator {
+    }
+  }
 }
