@@ -75,6 +75,7 @@
   display: block; /* 1 */
   font-family: $serif-font-stack;
   color: $grey;
+  font-size: $small-font-size;
 
   @include media('>=small') {
     -webkit-transform: translateY(20px);

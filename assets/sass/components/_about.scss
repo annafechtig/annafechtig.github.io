@@ -110,12 +110,12 @@
 }
 
 /**
- * 1. Extra 1% is needed to not hide the last character, caused by the serif
+ * 1. Extra 2% are needed to not hide the last character, caused by the serif
  *    font.
  * 2. Hides the `about__link` after elements.
  */
 .about__links-item-wrapper {
-  width: 101%; /* 1 */
+  width: 102%; /* 1 */
   overflow: hidden; /* 2 */
 }
 
@@ -137,8 +137,8 @@
   height: 2px;
   width: 100%;
   background-color: $salmon;
-  -webkit-transform: translateX(-101%) translateZ(0);
-  transform: translateX(-101%) translateZ(0);
+  -webkit-transform: translateX(-102%) translateZ(0);
+  transform: translateX(-102%) translateZ(0);
   -webkit-transition: -webkit-transform $menu-links-transition-duration;
   transition: -webkit-transform $menu-links-transition-duration;
   transition: transform $menu-links-transition-duration;
