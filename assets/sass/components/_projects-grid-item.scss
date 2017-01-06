@@ -12,6 +12,7 @@
 /**
  * 1. Using flexbox allows the grid’s content to always be centered vertically
  *    and horizontally.
+ * 2. On mobile, the content needs to be under the project thumbnail.
  */
 .projects-grid-item__link {
   display: -webkit-box;
@@ -26,7 +27,31 @@
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
-  flex-direction: column;
+  flex-direction: column; /* 2 */
+
+  &:hover,
+  &:focus {
+    @include media('>=small') {
+      .projects-grid-item__image {
+        opacity: 0;
+      }
+
+      .projects-grid-item__content {
+        opacity: 1;
+
+        .projects-grid-item__title,
+        .projects-grid-item__type {
+          -webkit-transform: translateY(0);
+          transform: translateY(0);
+        }
+
+        .projects-grid-item__separator {
+          -webkit-transform: translateX(0);
+          transform: translateX(0);
+        }
+      }
+    }
+  }
 }
 
 .projects-grid-item__content {
@@ -96,28 +121,4 @@
 .projects-grid-item__content {
   -webkit-transition: opacity $projects-hover-transition-duration;
   transition: opacity $projects-hover-transition-duration;
-}
-
-.projects-grid-item__link:hover,
-.projects-grid-item__link:focus {
-  @include media('>=small') {
-    .projects-grid-item__image {
-      opacity: 0;
-    }
-
-    .projects-grid-item__content {
-      opacity: 1;
-
-      .projects-grid-item__title,
-      .projects-grid-item__type {
-        -webkit-transform: translateY(0);
-        transform: translateY(0);
-      }
-
-      .projects-grid-item__separator {
-        -webkit-transform: translateX(0);
-        transform: translateX(0);
-      }
-    }
-  }
 }

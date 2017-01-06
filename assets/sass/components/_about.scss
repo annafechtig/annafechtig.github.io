@@ -64,25 +64,25 @@
 .about__text a {
   position: relative; /* 1 */
   color: inherit;
-}
 
-.about__text a::after {
-  @include underline();
-  opacity: 0;
-  -webkit-transform: translateX(-30%);
-  transform: translateX(-30%);
-  -webkit-transition: opacity $menu-links-transition-duration, -webkit-transform $menu-links-transition-duration;
-  transition: opacity $menu-links-transition-duration, -webkit-transform $menu-links-transition-duration;
-  transition: transform $menu-links-transition-duration, opacity $menu-links-transition-duration;
-  transition: transform $menu-links-transition-duration, opacity $menu-links-transition-duration, -webkit-transform $menu-links-transition-duration;
-}
-
-.about__text a:hover,
-.about__text a:focus {
   &::after {
-    opacity: 1;
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
+    @include underline();
+    opacity: 0;
+    -webkit-transform: translateX(-30%);
+    transform: translateX(-30%);
+    -webkit-transition: opacity $menu-links-transition-duration, -webkit-transform $menu-links-transition-duration;
+    transition: opacity $menu-links-transition-duration, -webkit-transform $menu-links-transition-duration;
+    transition: transform $menu-links-transition-duration, opacity $menu-links-transition-duration;
+    transition: transform $menu-links-transition-duration, opacity $menu-links-transition-duration, -webkit-transform $menu-links-transition-duration;
+  }
+
+  &:hover,
+  &:focus {
+    &::after {
+      opacity: 1;
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
+    }
   }
 }
 
@@ -124,24 +124,24 @@
   opacity: $menu-links-default-opacity;
   -webkit-transition: opacity $menu-links-transition-duration;
   transition: opacity $menu-links-transition-duration;
-}
-
-.about__link::after {
-  @include underline();
-  -webkit-transform: translateX(-102%) translateZ(0);
-  transform: translateX(-102%) translateZ(0);
-  -webkit-transition: -webkit-transform $menu-links-transition-duration;
-  transition: -webkit-transform $menu-links-transition-duration;
-  transition: transform $menu-links-transition-duration;
-  transition: transform $menu-links-transition-duration, -webkit-transform $menu-links-transition-duration;
-}
-
-.about__link:hover,
-.about__link:focus {
-  opacity: 1;
 
   &::after {
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
+    @include underline();
+    -webkit-transform: translateX(-102%) translateZ(0);
+    transform: translateX(-102%) translateZ(0);
+    -webkit-transition: -webkit-transform $menu-links-transition-duration;
+    transition: -webkit-transform $menu-links-transition-duration;
+    transition: transform $menu-links-transition-duration;
+    transition: transform $menu-links-transition-duration, -webkit-transform $menu-links-transition-duration;
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 1;
+
+    &::after {
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
+    }
   }
 }
