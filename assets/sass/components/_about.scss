@@ -105,13 +105,10 @@
 }
 
 /**
- * 1. Extra 2% are needed to not hide the last character, caused by the serif
- *    font.
- * 2. Bump up the height so that the underline is not cut.
- * 3. Hides the `about__link` after elements.
+ * 1. Bump up the height so that the underline is not cut.
+ * 2. Hides the `about__link` after elements.
  */
 .about__links-item-wrapper {
-  width: 102%; /* 1 */
   height: 1.5em; /* 2 */
   overflow: hidden; /* 3 */
 }
