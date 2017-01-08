@@ -20,6 +20,7 @@ defaults:
       type: projects
     values:
       layout: project
+      no_imprint_link: true
 
 about_text: |
   Hallo!

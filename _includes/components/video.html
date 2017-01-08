@@ -1,0 +1,24 @@
+{% assign video_id = include.video_id | default: "" %}
+{% assign video_source = include.video_source | default: "vimeo" %}
+{% capture link %}
+  {% if video_source == "vimeo" %}
+    //player.vimeo.com/video/
+  {% elsif video_source == "youtube" %}
+    //youtube.com/embed/
+  {% else %}
+    ""
+  {% endif %}
+{% endcapture %}
+{% assign link = link | strip | append: video_id %}
+
+{% if link != "" %}
+  <div class="embed-responsive embed-responsive-16by9 video">
+    <iframe
+      class="embed-responsive-item video__iframe"
+      src="{{ link }}"
+      frameborder="0"
+      webkitallowfullscreen
+      mozallowfullscreen allowfullscreen
+    ></iframe>
+  </div>
+{% endif %}

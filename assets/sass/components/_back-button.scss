@@ -1,0 +1,15 @@
+@import 'abstracts/mixins/underline';
+
+.back-button {
+  display: block;
+  text-align: center;
+  margin-top: 3em;
+  -webkit-animation: fade-in 500ms both;
+  animation: fade-in 500ms both;
+}
+
+.back-button__link {
+  @include underline();
+  font-family: $sans-serif-font-stack;
+  color: $blue;
+}

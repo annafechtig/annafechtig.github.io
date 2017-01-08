@@ -1,0 +1,7 @@
+{% assign informations = include.informations | default: "" %}
+
+{% if informations != "" %}
+  <p class="project-informations">
+    {{ informations | newline_to_br }}
+  </p>
+{% endif %}

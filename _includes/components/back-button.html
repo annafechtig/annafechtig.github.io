@@ -1,0 +1,8 @@
+{% assign url = include.url | default: site.baseurl %}
+{% assign text = include.text | default: "GO BACK" %}
+
+<div class="back-button">
+  <a href="{{ url }}" class="back-button__link">
+    {{ text }}
+  </a>
+</div>

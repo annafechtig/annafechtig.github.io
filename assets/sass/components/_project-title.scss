@@ -1,0 +1,17 @@
+@import 'abstracts/variables/colors';
+@import 'abstracts/variables/typography';
+
+/**
+ * 1. Required as Orator Std is an uppercase font
+ */
+.project-title {
+  margin-bottom: 0;
+  font-size: $huge-font-size;
+  font-weight: normal;
+  color: $blue;
+  text-transform: lowercase; /* 1 */
+
+  @include media('>medium') {
+    margin: 0;
+  }
+}

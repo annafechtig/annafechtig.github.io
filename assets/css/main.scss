@@ -17,12 +17,18 @@ $projects-count: {{ site.projects.size }};
 
 @import 'components/about';
 @import 'components/about-button';
+@import 'components/back-button';
 @import 'components/header';
 @import 'components/icon';
 @import 'components/imprint';
 @import 'components/imprint-link';
 @import 'components/logo';
 @import 'components/page-title';
+@import 'components/project-description';
+@import 'components/project-informations';
+@import 'components/project-title';
+@import 'components/project-type';
 @import 'components/projects-grid';
 @import 'components/projects-grid-item';
+@import 'components/separator';
 @import 'components/social';

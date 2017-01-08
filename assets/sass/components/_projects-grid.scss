@@ -5,9 +5,9 @@
     $delay: 0;
 
     @if ($i == 1) {
-      $delay: $projects-item-reveal-delay;
+      $delay: $project-item-reveal-delay;
     } @else {
-      $delay: $projects-item-reveal-delay * $i;
+      $delay: $project-item-reveal-delay * $i;
     }
 
     &:nth-child(#{$i}) .projects-grid-item {

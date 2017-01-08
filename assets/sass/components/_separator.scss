@@ -1,0 +1,7 @@
+@import 'abstracts/variables/layout';
+
+.separator {
+  width: 35px;
+  height: $large-separator-height;
+  margin-left: 0;
+}
