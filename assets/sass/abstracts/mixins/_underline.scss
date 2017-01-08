@@ -1,11 +1,34 @@
 @import 'abstracts/variables/layout';
 
+/**
+ * 1. Positioning context for after element.
+ */
 @mixin underline {
-  content: '';
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 100%;
-  height: $separators-height;
-  background-color: $salmon;
+  position: relative; /* 1 */
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: $separators-height;
+    background-color: $salmon;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transform-origin: left;
+    transform-origin: left;
+    -webkit-transition: -webkit-transform $menu-links-transition-duration;
+    transition: -webkit-transform $menu-links-transition-duration;
+    transition: transform $menu-links-transition-duration;
+    transition: transform $menu-links-transition-duration, -webkit-transform $menu-links-transition-duration;
+  }
+
+  &:hover,
+  &:focus {
+    &::after {
+      -webkit-transform: scaleX(1);
+      transform: scaleX(1);
+    }
+  }
 }

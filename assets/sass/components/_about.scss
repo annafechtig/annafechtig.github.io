@@ -58,32 +58,9 @@
   color: $blue;
 }
 
-/**
- * 1. Positioning context for after element.
- */
 .about__text a {
-  position: relative; /* 1 */
+  @include underline();
   color: inherit;
-
-  &::after {
-    @include underline();
-    opacity: 0;
-    -webkit-transform: translateX(-30%);
-    transform: translateX(-30%);
-    -webkit-transition: opacity $menu-links-transition-duration, -webkit-transform $menu-links-transition-duration;
-    transition: opacity $menu-links-transition-duration, -webkit-transform $menu-links-transition-duration;
-    transition: transform $menu-links-transition-duration, opacity $menu-links-transition-duration;
-    transition: transform $menu-links-transition-duration, opacity $menu-links-transition-duration, -webkit-transform $menu-links-transition-duration;
-  }
-
-  &:hover,
-  &:focus {
-    &::after {
-      opacity: 1;
-      -webkit-transform: translateX(0);
-      transform: translateX(0);
-    }
-  }
 }
 
 /**
@@ -105,40 +82,19 @@
 }
 
 /**
- * 1. Bump up the height so that the underline is not cut.
- * 2. Hides the `about__link` after elements.
- */
-.about__links-item-wrapper {
-  height: 1.5em; /* 2 */
-  overflow: hidden; /* 3 */
-}
-
-/**
- * 1. Positioning context for after element.
+ * 1. Allows the link to have an height by being inline-block like its parent.
+ * 2. Bump up the height so that the underline doesn’t move the content.
  */
 .about__link {
-  position: relative; /* 1 */
+  @include underline();
+  display: inherit; /* 1 */
+  height: 1.5em; /* 2 */
   opacity: $menu-links-default-opacity;
   -webkit-transition: opacity $menu-links-transition-duration;
   transition: opacity $menu-links-transition-duration;
 
-  &::after {
-    @include underline();
-    -webkit-transform: translateX(-102%) translateZ(0);
-    transform: translateX(-102%) translateZ(0);
-    -webkit-transition: -webkit-transform $menu-links-transition-duration;
-    transition: -webkit-transform $menu-links-transition-duration;
-    transition: transform $menu-links-transition-duration;
-    transition: transform $menu-links-transition-duration, -webkit-transform $menu-links-transition-duration;
-  }
-
   &:hover,
   &:focus {
     opacity: 1;
-
-    &::after {
-      -webkit-transform: translateX(0);
-      transform: translateX(0);
-    }
   }
 }
