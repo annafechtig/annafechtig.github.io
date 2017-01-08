@@ -3,6 +3,7 @@
 @import 'abstracts/variables/animations';
 @import 'abstracts/variables/colors';
 @import 'abstracts/variables/layout';
+@import 'abstracts/variables/typography';
 
 .about {
   position: absolute;
@@ -32,12 +33,14 @@
   top: calc(50% - #{$mobile-header-height / 2});
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
+  font-size: $smaller-font-size;
   z-index: 99;
 
   @include media('>=small') {
     top: calc(50% - #{$header-height / 2});
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
+    font-size: $root-font-size;
   }
 }
 
