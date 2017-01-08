@@ -45,11 +45,30 @@
 }
 
 .about__background {
+  display: none;
+
   @include media('>=small') {
+    display: block;
     height: 85%;
-    background-color: $salmon;
-    opacity: 0.1;
+    background-color: rgba($salmon, 0.1);
   }
+}
+
+.about__background-image {
+  position: absolute;
+  top: 75%;
+  left: 75%;
+  -webkit-transform: translate(-75%, -75%);
+  transform: translate(-75%, -75%);
+  opacity: 1;
+  -webkit-transition: all $about-image-hover-transition;
+  transition: all $about-image-hover-transition;
+}
+
+.about__background-image--hidden {
+  opacity: 0;
+  -webkit-transform: translateX(-75%);
+  transform: translateX(-75%);
 }
 
 /**

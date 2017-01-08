@@ -25,7 +25,7 @@ about_text: |
   Hallo!
   My name is Anna and I’m a 3rd year Media design student at <a href="https://www.hdpk.de/de/startseite/" target="_blank" rel="noopener noreferrer">HDPK</a> in Berlin.
 
-  I’m a dreamer, nature enthusiast, alpaca owner and creator of anything that i think is worth to be created.
+  I’m a dreamer, nature enthusiast, <span id="alpaga-toggle">alpaca owner</span> and creator of anything that i think is worth to be created.
 
   In the past, i had the chance to work at Foodora and anekdotboutique.
   I’m available all year for freelance work.
