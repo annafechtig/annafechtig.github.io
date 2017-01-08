@@ -1,7 +1,7 @@
 environment: production
 
 title: Anna Fechtig
-description: Anna Fechtig
+description: Anna Fechtig, media designer and creator of anything that is worth to be created.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: http://www.annafechtig.com # the base hostname & protocol for your site
 
