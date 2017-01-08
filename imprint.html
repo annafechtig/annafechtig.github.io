@@ -6,4 +6,8 @@ description: Anna Fechtig - Imprint
 no_index: true
 ---
 
-{% assign imprint = site.imprint_text %}
+{% include components/page-title.html
+  text = page.title
+%}
+
+{% include components/imprint.html %}
