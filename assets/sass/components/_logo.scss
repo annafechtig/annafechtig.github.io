@@ -3,9 +3,17 @@
   max-width: 200px;
   margin: 0 auto;
   color: $black;
+  opacity: $menu-links-default-opacity;
+  -webkit-transition: opacity $menu-links-transition-duration;
+  transition: opacity $menu-links-transition-duration;
 
   @include media('>=small') {
     margin: 0;
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 1;
   }
 }
 
