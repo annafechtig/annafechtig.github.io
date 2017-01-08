@@ -8,8 +8,12 @@
   animation: fade-in 500ms both;
 }
 
+/**
+ * 1. Required as Orator Std is an uppercase font
+ */
 .back-button__link {
   @include underline();
   font-family: $sans-serif-font-stack;
   color: $blue;
+  text-transform: lowercase; /* 1 */
 }

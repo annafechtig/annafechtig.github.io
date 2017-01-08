@@ -146,6 +146,8 @@
   }
 }
 
+.clearfix:before,
+.clearfix:after,
 .container:before,
 .container:after,
 .row:before,
@@ -155,6 +157,7 @@
   content: ' ';
 }
 
+.clearfix:after,
 .container:after,
 .row:after {
   clear: both;
