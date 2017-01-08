@@ -1,0 +1,13 @@
+@import 'abstracts/mixins/underline';
+
+.back-button {
+  display: block;
+  text-align: center;
+  margin-top: 3em;
+}
+
+.back-button__link {
+  @include underline();
+  font-family: $sans-serif-font-stack;
+  color: $blue;
+}

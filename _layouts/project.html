@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<div class="project">
+<div class="clearfix project">
   <div class="col-xs-12 col-md-9 project__media">
     {% if page.media_type == "image" %}
       {% include components/image.html
@@ -37,3 +37,5 @@ layout: default
     %}
   </div>
 </div>
+
+{% include components/back-button.html %}

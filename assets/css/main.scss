@@ -17,6 +17,7 @@ $projects-count: {{ site.projects.size }};
 
 @import 'components/about';
 @import 'components/about-button';
+@import 'components/back-button';
 @import 'components/header';
 @import 'components/icon';
 @import 'components/imprint';
