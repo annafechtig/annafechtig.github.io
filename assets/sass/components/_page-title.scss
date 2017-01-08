@@ -1,0 +1,10 @@
+@import 'abstracts/variables/colors';
+
+/**
+ * 1. Resets default heading styles.
+ */
+.page-title {
+  margin: 0; /* 1 */
+  font-weight: normal;
+  color: $blue;
+}
