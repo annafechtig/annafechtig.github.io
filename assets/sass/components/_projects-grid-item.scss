@@ -5,8 +5,8 @@
 .projects-grid-item {
   padding: 0 15px;
 
-  -webkit-animation: project-item-reveal $projects-item-reveal-duration both;
-  animation: project-item-reveal $projects-item-reveal-duration both;
+  -webkit-animation: project-item-reveal $project-item-reveal-duration both;
+  animation: project-item-reveal $project-item-reveal-duration both;
 }
 
 /**

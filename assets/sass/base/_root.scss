@@ -58,6 +58,11 @@ body {
   }
 }
 
+.project__content {
+  -webkit-animation: project-content-reveal 1s both;
+  animation: project-content-reveal 1s both;
+}
+
 a {
   color: $black;
   text-decoration: none;
