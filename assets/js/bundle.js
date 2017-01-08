@@ -5,10 +5,13 @@
   var aboutButton = document.querySelector('.about-button')
   var header = document.querySelector('.header')
   var main = document.querySelector('.main')
+  var alpacaToggle = document.getElementById('alpaga-toggle')
+  var alpacaImage = document.getElementById('alpaca-image')
 
   var unscrollableModifierClass = 'unscrollable'
   var aboutHintModifierClass = 'header--push-hinted'
   var headerModifierClass = 'header--pushed'
+  var aboutImageModifierClass = 'about__background-image--hidden'
 
   var aboutTransitionDuration = about && (parseFloat(
     window.getComputedStyle(about)['transitionDuration']
@@ -18,11 +21,22 @@
 
   function initAbout () {
     if (aboutButton) {
-      ['mouseover', 'focus', 'mouseout', 'blur'].forEach(function (event) {
-        aboutButton.addEventListener(event, toggleAboutHinting)
-      })
       aboutButton.addEventListener('click', toggleAbout)
+      initAboutHinting()
+      initAlpacaImageToggling()
     }
+  }
+
+  function initAboutHinting () {
+    ['mouseover', 'focus', 'mouseout', 'blur'].forEach(function (event) {
+      aboutButton.addEventListener(event, toggleAboutHinting)
+    })
+  }
+
+  function initAlpacaImageToggling () {
+    ['mouseover', 'mouseout'].forEach(function (event) {
+      alpacaToggle.addEventListener(event, toggleAlpacaImage)
+    })
   }
 
   function toggleAboutHinting (event) {
@@ -34,6 +48,10 @@
       !headerClassList.contains(headerModifierClass) &&
         headerClassList.add(aboutHintModifierClass)
     }
+  }
+
+  function toggleAlpacaImage () {
+    alpacaImage.classList.toggle(aboutImageModifierClass)
   }
 
   function toggleAbout () {
