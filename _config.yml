@@ -3,7 +3,7 @@ environment: production
 title: Anna Fechtig
 description: Anna Fechtig
 baseurl: "" # the subpath of your site, e.g. /blog
-url: http://anna-fechtig.com # the base hostname & protocol for your site
+url: http://www.annafechtig.com # the base hostname & protocol for your site
 
 gems:
   - jekyll-sitemap
