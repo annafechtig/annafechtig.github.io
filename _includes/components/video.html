@@ -3,14 +3,16 @@
 {% capture link %}
   {% if video_source == "vimeo" %}
     //player.vimeo.com/video/
-  {% else %}
+  {% elsif video_source == "youtube" %}
     //youtube.com/embed/
+  {% else %}
+    ""
   {% endif %}
 {% endcapture %}
 {% assign link = link | strip | append: video_id %}
 
-<div class="col-xs-12 col-md-9 video">
-  <div class="embed-responsive embed-responsive-16by9">
+{% if link != "" %}
+  <div class="embed-responsive embed-responsive-16by9 video">
     <iframe
       class="embed-responsive-item video__iframe"
       src="{{ link }}"
@@ -19,4 +21,4 @@
       mozallowfullscreen allowfullscreen
     ></iframe>
   </div>
-</div>
+{% endif %}

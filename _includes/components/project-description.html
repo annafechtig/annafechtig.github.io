@@ -1,0 +1,7 @@
+{% assign description = include.description | default: "" %}
+
+{% if description != "" %}
+  <p class="project-description">
+    {{ description }}
+  </p>
+{% endif %}

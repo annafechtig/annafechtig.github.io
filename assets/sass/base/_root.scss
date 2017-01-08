@@ -50,6 +50,14 @@ body {
   }
 }
 
+.project {
+  @include media('>medium') {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
 a {
   color: $black;
   text-decoration: none;

@@ -2,17 +2,38 @@
 layout: default
 ---
 
-{% if page.media_type == "image" %}
-  {% include components/image.html
-    image_url = page.image_url
-    title = page.title
-  %}
-{% else %}
-  {% include components/video.html
-    video_id = page.video_id
-    video_source = page.video_source
-  %}
-{% endif %}
+<div class="project">
+  <div class="col-xs-12 col-md-9 project__media">
+    {% if page.media_type == "image" %}
+      {% include components/image.html
+        image_url = page.image_url
+        title = page.title
+      %}
+    {% else %}
+      {% include components/video.html
+        video_id = page.video_id
+        video_source = page.video_source
+      %}
+    {% endif %}
+  </div>
 
-<p>{{ page.description }}</p>
-<p>{{ page.informations | newline_to_br }}</p>
+  <div class="col-xs-12 col-md-3 project__content">
+    {% include components/project-title.html
+      title = page.title
+    %}
+
+    {% include components/separator.html %}
+
+    {% include components/project-type.html
+      type = page.type
+    %}
+
+    {% include components/project-description.html
+      description = page.description
+    %}
+
+    {% include components/project-informations.html
+      informations = page.informations
+    %}
+  </div>
+</div>
