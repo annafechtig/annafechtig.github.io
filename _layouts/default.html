@@ -1,4 +1,5 @@
 {% assign animated_header = page.animated_header %}
+{% assign no_imprint_link = page.no_imprint_link | default: "" %}
 
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: 'en' }}">
@@ -14,7 +15,9 @@
     <main class="main container">
       {{ content }}
 
-      {% include components/imprint-link.html %}
+      {% unless no_imprint_link != "" %}
+        {% include components/imprint-link.html %}
+      {% endunless %}
     </main>
 
     {% include scripts.html %}
