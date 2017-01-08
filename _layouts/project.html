@@ -2,3 +2,22 @@
 layout: default
 ---
 <h1>{{ page.title }}</h1>
+
+{% if page.media_type == "image" %}
+  <img src="assets/images/projects-images/{{ page.image_url }}">
+{% elsif page.media_type == "youtube" %}
+  <iframe src="//youtube.com/embed/{{ page.video_id }}"
+    frameborder="0"
+    webkitallowfullscreen
+    allowfullscreen
+  ></iframe>
+{% else %}
+  <iframe src="//player.vimeo.com/video/{{ page.video_id }}"
+    frameborder="0"
+    webkitallowfullscreen
+    mozallowfullscreen allowfullscreen
+  ></iframe>
+{% endif %}
+
+<p>{{ page.description }}</p>
+<p>{{ page.informations | newline_to_br }}</p>
