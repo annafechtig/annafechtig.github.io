@@ -41,10 +41,8 @@ social_networks:
 
 email_address: anna.fechtig@t-online.de
 
-# @TODO SET GOOGLE ANALYTICS IDS
 google_analytics:
-  site_id:
-  analycator_app_id:
+  site_id: UA-90032604-1
 
 # Sass settings
 sass:
