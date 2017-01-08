@@ -1,3 +1,5 @@
+{% assign animated_header = page.animated_header %}
+
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: 'en' }}">
   {% include head.html %}
@@ -5,7 +7,9 @@
     {% include sprite.svg %}
 
     {% include components/about.html %}
-    {% include components/header.html %}
+    {% include components/header.html
+      animated_header = animated_header
+    %}
 
     <main class="main container">
       {{ content }}

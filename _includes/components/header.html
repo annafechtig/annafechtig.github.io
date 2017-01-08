@@ -1,4 +1,13 @@
-<header class="header">
+{% assign animated_header = include.animated_header | default: page.animated_header | default: "" %}
+{% capture class %}
+  {% if animated_header != "" %}
+    header header--animated
+  {% else %}
+    header
+  {% endif %}
+{% endcapture %}
+
+<header class="{{ class }}">
   <div class="container">
     <div class="header__container row">
       <div class="col-xs-12 col-md-4">
