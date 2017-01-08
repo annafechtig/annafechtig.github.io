@@ -1,0 +1,8 @@
+{% assign image_url = include.image_url | default: "" %}
+{% assign title = include.title | default: "" %}
+
+<img
+  class="img-responsive col-xs-12 col-md-9"
+  src="assets/images/projects-images/{{ image_url }}"
+  title="Project image for {{ title }}"
+>

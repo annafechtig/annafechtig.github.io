@@ -1,0 +1,22 @@
+{% assign video_id = include.video_id | default: "" %}
+{% assign video_source = include.video_source | default: "vimeo" %}
+{% capture link %}
+  {% if video_source == "vimeo" %}
+    //player.vimeo.com/video/
+  {% else %}
+    //youtube.com/embed/
+  {% endif %}
+{% endcapture %}
+{% assign link = link | strip | append: video_id %}
+
+<div class="col-xs-12 col-md-9 video">
+  <div class="embed-responsive embed-responsive-16by9">
+    <iframe
+      class="embed-responsive-item video__iframe"
+      src="{{ link }}"
+      frameborder="0"
+      webkitallowfullscreen
+      mozallowfullscreen allowfullscreen
+    ></iframe>
+  </div>
+</div>
