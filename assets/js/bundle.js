@@ -61,12 +61,8 @@
     aboutButton.setAttribute('aria-pressed', state)
     about.setAttribute('aria-expanded', state)
 
-    // The about button is blurred to avoid the hint class to be unnecessarily
-    // applied on the first click after closing the about section.
-    !state && aboutButton.blur()
-
-    // Allows/Disallows tabbing through all children of about & main. Delays the
-    // `aria-hidden` switch so that it doesn’t break the animation.
+    // Delays the `aria-hidden` switch by the same amount as the transition’s
+    // duration so that it doesn’t break the animation.
     mainTimeout = setTimeout(function () {
       main.setAttribute('aria-hidden', state)
     }, (state ? aboutTransitionDuration : 0))
