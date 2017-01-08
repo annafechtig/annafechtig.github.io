@@ -64,7 +64,7 @@
 }
 
 /**
- * 1. Reset default list & list elements styles.
+ * 1. Resets default list & list elements styles.
  */
 .about__links {
   margin: 0; /* 1 */
@@ -83,7 +83,7 @@
 
 /**
  * 1. Allows the link to have an height by being inline-block like its parent.
- * 2. Bump up the height so that the underline doesn’t move the content.
+ * 2. Bumps up the height so that the underline doesn’t move the content.
  */
 .about__link {
   @include underline();

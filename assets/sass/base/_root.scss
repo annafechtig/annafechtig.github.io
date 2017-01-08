@@ -9,7 +9,7 @@ html {
 }
 
 /**
- * Make all elements from the DOM inherit from the parent box-sizing
+ * Makes all elements from the DOM inherit from the parent box-sizing
  * Since `*` has a specificity of 0, it does not override the `html` value
  * making all elements inheriting from the root box-sizing value
  * See: https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
@@ -39,7 +39,7 @@ body {
 }
 
 /**
- * 1. Main content is pushed down so it isn’t overlapped by the header.
+ * 1. Pushes down main content so that it isn’t overlapped by the header.
  */
 .main {
   padding-top: calc(#{$mobile-header-height} + 2.5em); /* 1 */
@@ -67,7 +67,7 @@ hr {
 
 /**
  * Bootstrap overrides & customization
- * 1. Remove the bottom margin of the items of the last row of the grid,
+ * 1. Removes the bottom margin of the items of the last row of the grid,
  *    taking into account the cases when the grid is not fully filled. The
  *    `projects-count` variable is automatically imported from Jekyll in
  *    `main.scss`.

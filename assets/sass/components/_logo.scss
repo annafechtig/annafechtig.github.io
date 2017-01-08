@@ -10,8 +10,8 @@
 }
 
 /**
- * 1. Prevent the SVG from being huge on Safari.
- * 2. Enforce a specific height as certain browsers render a very tall header.
+ * 1. Prevents the SVG from being huge on Safari.
+ * 2. Enforces a specific height as certain browsers render a very tall header.
  */
 .logo svg {
   max-width: 100%; /* 1 */

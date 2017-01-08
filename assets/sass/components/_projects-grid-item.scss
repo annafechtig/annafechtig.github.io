@@ -10,9 +10,9 @@
 }
 
 /**
- * 1. Using flexbox allows the grid’s content to always be centered vertically
+ * 1. Allows the grid’s content to always be centered vertically
  *    and horizontally.
- * 2. On mobile, the content needs to be under the project thumbnail.
+ * 2. Puts the content under the project thumbnail as required on mobile.
  */
 .projects-grid-item__link {
   display: -webkit-box;
@@ -94,7 +94,7 @@
 }
 
 /**
- * 1. The span needs to be of display block to be translated for the transition.
+ * 1. Allows the span to be translated for the transition.
  */
 .projects-grid-item__type {
   display: block; /* 1 */
