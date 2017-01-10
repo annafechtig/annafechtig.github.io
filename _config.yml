@@ -7,7 +7,6 @@ url: http://www.annafechtig.com # the base hostname & protocol for your site
 
 gems:
   - jekyll-sitemap
-  - jekyll-autoprefixer
 
 collections:
   projects:
