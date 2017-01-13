@@ -1,8 +1,20 @@
+@import 'abstracts/mixins/underline';
 @import 'abstracts/variables/colors';
 @import 'abstracts/variables/typography';
 
-
 .project-description {
-  color: rgba($black, $menu-links-default-opacity);
+  color: rgba($black, $menu-links-default-alpha);
   font-family: $serif-font-stack;
+}
+
+.project-description a {
+  @include underline();
+  color: rgba($black, $menu-links-default-alpha);
+  -webkit-transition: color $menu-links-transition-duration;
+  transition: color $menu-links-transition-duration;
+
+  &:hover,
+  &:focus {
+    color: $black;
+  }
 }

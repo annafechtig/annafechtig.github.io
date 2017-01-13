@@ -3,8 +3,7 @@
 
 .project-informations {
   margin: 0;
-  color: $grey;
-  opacity: 0.4;
+  color: $light-grey;
   font-size: $small-font-size;
 
   @include media('>medium') {

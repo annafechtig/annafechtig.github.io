@@ -111,12 +111,12 @@
   @include underline();
   display: inherit; /* 1 */
   height: 1.5em; /* 2 */
-  opacity: $menu-links-default-opacity;
-  -webkit-transition: opacity $menu-links-transition-duration;
-  transition: opacity $menu-links-transition-duration;
+  color: rgba($black, $menu-links-default-alpha);
+  -webkit-transition: color $menu-links-transition-duration;
+  transition: color $menu-links-transition-duration;
 
   &:hover,
   &:focus {
-    opacity: 1;
+    color: $black;
   }
 }

@@ -19,14 +19,14 @@
 }
 
 .social__link > svg {
-  opacity: $menu-links-default-opacity;
+  color: rgba($black, $menu-links-default-alpha);
   -webkit-transition: all $menu-links-transition-duration;
   transition: all $menu-links-transition-duration;
 }
 
 .social__link:hover > svg,
 .social__link:focus > svg {
-  opacity: 1;
+  color: $black;
   -webkit-transform: rotate(15deg);
   transform: rotate(15deg);
 }

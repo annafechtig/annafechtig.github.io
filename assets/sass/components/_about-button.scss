@@ -7,13 +7,13 @@
   background-color: transparent; /* 1 */
   border: none; /* 1 */
   box-shadow: none; /* 1 */
-  opacity: $menu-links-default-opacity;
+  color: rgba($black, $menu-links-default-alpha);
   cursor: pointer;
-  -webkit-transition: opacity $menu-links-transition-duration;
-  transition: opacity $menu-links-transition-duration;
+  -webkit-transition: color $menu-links-transition-duration;
+  transition: color $menu-links-transition-duration;
 
   &:hover,
   &:focus {
-    opacity: 1;
+    color: $black;
   }
 }
