@@ -4,7 +4,7 @@
 .project-informations {
   margin: 0;
   color: $light-grey;
-  font-size: $small-font-size;
+  font-size: $smaller-font-size;
 
   @include media('>medium') {
     position: absolute;
