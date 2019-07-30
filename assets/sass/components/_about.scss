@@ -80,37 +80,18 @@
   color: $blue;
 }
 
-.about__text a {
-  @include underline();
-  color: inherit;
-}
-
 /**
- * 1. Resets default list & list elements styles.
+ * 1. Allows the link to have an height by being inline-block.
+ * 2. Bumps up the height so that the underline doesn’t move the content.
  */
-.about__links {
-  margin: 0; /* 1 */
-  padding: 0; /* 1 */
-  list-style: none; /* 1 */
+.about__email-address {
+  @include underline();
+  display: inline-block; /* 1 */
+  height: 1.5em; /* 2 */
   margin-top: 1em;
   font-family: $serif-font-stack;
   font-size: $small-font-size;
   font-style: italic;
-}
-
-.about__links-item {
-  display: inline-block;
-  margin-right: 1em;
-}
-
-/**
- * 1. Allows the link to have an height by being inline-block like its parent.
- * 2. Bumps up the height so that the underline doesn’t move the content.
- */
-.about__link {
-  @include underline();
-  display: inherit; /* 1 */
-  height: 1.5em; /* 2 */
   color: rgba($black, $menu-links-default-alpha);
   -webkit-transition: color $menu-links-transition-duration;
   transition: color $menu-links-transition-duration;
