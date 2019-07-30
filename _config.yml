@@ -2,10 +2,10 @@ environment: production
 
 title: Anna Fechtig
 description: Anna Fechtig, freelance video creator, berlin.
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: '' # the subpath of your site, e.g. /blog
 url: http://www.annafechtig.com # the base hostname & protocol for your site
 
-gems:
+plugins:
   - jekyll-sitemap
 
 collections:
@@ -15,7 +15,7 @@ collections:
 
 defaults:
   - scope:
-      path: ""
+      path: ''
       type: projects
     values:
       layout: project
@@ -24,7 +24,7 @@ defaults:
 about_text: |
   Hallo!
   My name is Anna. I’m a filmmaker and video editor from Berlin.
-  
+
    I’m a nature enthusiast, <span id="alpaga-toggle">alpaca owner</span> and creator of anything that i think is worth to be created.
 
   I’m available for freelance work.
@@ -47,5 +47,3 @@ google_analytics:
 sass:
   sass_dir: assets/sass
   style: :compressed
-
-
