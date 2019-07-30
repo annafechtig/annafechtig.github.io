@@ -23,13 +23,11 @@ defaults:
 
 about_text: |
   Hallo!
-  My name is Anna and I’m a Freelance Video Creator from Berlin.
-
-  I’m a dreamer, nature enthusiast, <span id="alpaga-toggle">alpaca owner</span> and creator of anything that i think is worth to be created.
-
-  In the past, i had the chance to work for <a http://www.universal-music.de/" target="_blank" rel="noopener noreferrer">Universal Music Group, </a> , <a href="https://www.foodora.com/" target="_blank" rel="noopener noreferrer">Foodora</a> and <a href="http://www.anekdotboutique.com/" target="_blank" rel="noopener noreferrer">anekdotboutique</a>.
+  My name is Anna. I’m a filmmaker and video editor from Berlin.
   
-  I’m available all year for freelance work.
+   I’m a nature enthusiast, <span id="alpaga-toggle">alpaca owner</span> and creator of anything that i think is worth to be created.
+
+  I’m available for freelance work.
 
 # Accounts settings
 social_networks:
@@ -49,3 +47,6 @@ google_analytics:
 sass:
   sass_dir: assets/sass
   style: :compressed
+
+In the past, i had the chance to work for <a http://www.universal-music.de/" target="_blank" rel="noopener noreferrer">Universal Music Group, </a> , <a href="https://www.foodora.com/" target="_blank" rel="noopener noreferrer">Foodora</a> and <a href="http://www.anekdotboutique.com/" target="_blank" rel="noopener noreferrer">anekdotboutique</a>.
+  
