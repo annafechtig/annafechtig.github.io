@@ -1,4 +1,4 @@
-environment: production
+
 
 title: Anna Fechtig
 description: Anna Fechtig, freelance video creator, berlin.
@@ -25,7 +25,7 @@ about_text: |
   Hallo!
    My name is Anna. I’m a Video & Content Creator based in Berlin with a BA in Motion Design/Media Design.
 
- Passionate about sustainability, fair fashion and good bread. I'm an <span id="alpaga-toggle">alpaca owner</span> 
+   I’m a nature enthusiast, <span id="alpaga-toggle">alpaca owner</span> and passionate about fair fashion.
 
    Available for freelance work.
 
